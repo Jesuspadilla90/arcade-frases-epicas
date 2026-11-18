@@ -1,4 +1,3 @@
-
 # ⚡ ARCADE DE FRASES ÉPICAS
 
 ## 🎮 Descripción del proyecto
@@ -15,7 +14,7 @@ El objetivo es crear una colección de frases legendarias y mostrar un ranking T
 - Vite
 - SQL.js
 - SQLite
-- LocalStorage
+- LocalStorage (almacenamiento local)
 - Git y GitHub
 - Vercel (despliegue y alojamiento web)
 
@@ -27,9 +26,9 @@ El objetivo es crear una colección de frases legendarias y mostrar un ranking T
 - Eliminar frases.
 - Votar por las frases favoritas.
 - Buscar frases por texto o autor.
-- Filtrar por categorías.
+- Filtrar frases por categorías.
 - Mostrar un ranking TOP 10.
-- Guardar los datos para conservarlos al recargar la página.
+- Conservar los datos al recargar la página.
 
 ## 🗄️ Base de datos
 
@@ -37,7 +36,7 @@ El proyecto utiliza SQL.js, una implementación de SQLite que funciona en el nav
 
 Los datos de la base de datos se exportan y almacenan en LocalStorage para conservar los registros entre sesiones en el mismo navegador.
 
-**Nota:** Los datos se conservan localmente en cada navegador y dispositivo; no se sincronizan automáticamente entre usuarios o dispositivos.
+**Nota:** Los datos se conservan localmente en cada navegador y dispositivo. No se sincronizan automáticamente entre diferentes usuarios o dispositivos.
 
 ## 📁 Estructura del proyecto
 
@@ -61,7 +60,10 @@ arcade-frases-epicas/
 │   └── main.ts
 ├── index.html
 ├── package.json
+├── package-lock.json
 ├── vite.config.ts
+├── tsconfig.json
+├── .gitignore
 └── README.md
 ```
 
@@ -70,7 +72,7 @@ arcade-frases-epicas/
 ### 1. Clonar el repositorio
 
 ```bash
-git https://github.com/Jesuspadilla90/arcade-frases-epicas.git
+git clone https://github.com/Jesuspadilla90/arcade-frases-epicas.git
 ```
 
 ### 2. Entrar a la carpeta
@@ -79,7 +81,7 @@ git https://github.com/Jesuspadilla90/arcade-frases-epicas.git
 cd arcade-frases-epicas
 ```
 
-### 3. Instalar dependencias
+### 3. Instalar las dependencias
 
 ```bash
 npm install
@@ -97,7 +99,7 @@ Abrir en el navegador la dirección:
 http://localhost:5173/
 ```
 
-### 5. Generar versión de producción
+### 5. Generar la versión de producción
 
 ```bash
 npm run build
@@ -116,11 +118,13 @@ También permite votar y organizar las frases según su popularidad.
 
 ## 🌐 Despliegue
 
-El proyecto está preparado para desplegarse en Vercel.
+El proyecto se despliega mediante Vercel para permitir el acceso a la aplicación desde internet.
+
+**URL del proyecto:** Se agregará el enlace público de Vercel una vez publicado.
 
 ## 👨‍💻 Autor
 
-**Nombre:** Jesús Alexander Membreño Padilla
+**Nombre:** Jesús Alejandro Membreño Padilla
 
 **Proyecto:** EPIC ARCADE
 
