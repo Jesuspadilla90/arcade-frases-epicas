@@ -1,0 +1,480 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+    font-family: 'Rajdhani', sans-serif;
+    color: #f5f3ff;
+    background: #090713;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 15% 10%, #35105a55, transparent 40%),
+        radial-gradient(ellipse at 90% 35%, #102c6655, transparent 35%),
+        #090713;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #100c20dd;
+    border-bottom: 1px solid #9b5cff44;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #b46aff;
+}
+
+.online-status {
+    color: #54f6b0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+.hero {
+    padding: 85px 20px 65px;
+    text-align: center;
+}
+
+.hero-tag, .section-label {
+    color: #b77aff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 20px 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(27px, 5vw, 49px);
+    line-height: 1.3;
+}
+
+.hero h1 span {
+    color: #bd79ff;
+    text-shadow: 0 0 25px #a34aff99;
+}
+
+.hero > p {
+    max-width: 650px;
+    margin: auto;
+    color: #b6adc9;
+    font-size: 19px;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 35px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-stats strong {
+    color: #bd83ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+}
+
+.hero-stats span {
+    color: #9389a9;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 25px;
+    align-items: start;
+    padding-bottom: 60px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.section-heading h2, .ranking-title h2 {
+    margin-top: 7px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 21px;
+}
+
+.total-label {
+    color: #a99bbd;
+    font-size: 12px;
+}
+
+.quote-form, .ranking-section {
+    background: #151024;
+    border: 1px solid #7945b955;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 0 25px #5d22a411;
+}
+
+.quote-form h3 {
+    margin-bottom: 17px;
+    color: #d9bdff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+}
+
+.quote-form input, .quote-form select,
+.filters input, .filters select {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    color: white;
+    background: #0d0a18;
+    border: 1px solid #55406d;
+    border-radius: 8px;
+    outline: none;
+}
+
+.quote-form input:focus, .quote-form select:focus,
+.filters input:focus, .filters select:focus {
+    border-color: #b36aff;
+    box-shadow: 0 0 10px #9b4aff44;
+}
+
+.quote-form input::placeholder, .filters input::placeholder {
+    color: #837990;
+}
+
+.quote-form select option, .filters select option {
+    background: #151024;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.publish-button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    color: white;
+    background: linear-gradient(100deg, #792be5, #3469e8);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+
+.publish-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 22px #9c4dff88;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.quote-card {
+    position: relative;
+    padding: 22px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #1c1430, #100d1e);
+    border: 1px solid #7542a955;
+    border-radius: 13px;
+    transition: .2s;
+}
+
+.quote-card:hover {
+    transform: translateY(-4px);
+    border-color: #b46aff;
+    box-shadow: 0 8px 25px #9c4dff22;
+}
+
+.quote-category {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #d2a8ff;
+    background: #a14dff22;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.quote-mark {
+    margin-top: 10px;
+    height: 35px;
+    color: #9e5aff;
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: 1;
+}
+
+.quote-text {
+    min-height: 65px;
+    margin: 10px 0;
+    color: #f5efff;
+    font-size: 19px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.quote-author {
+    color: #aa91c7;
+    font-size: 15px;
+}
+
+.quote-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #ffffff14;
+}
+
+.vote-button {
+    padding: 8px 12px;
+    color: #d9b5ff;
+    background: #913dff22;
+    border: 1px solid #9e59ff66;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.vote-button:hover {
+    background: #913dff55;
+}
+
+.card-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.edit-button, .delete-button {
+    padding: 7px 9px;
+    background: #ffffff0d;
+    border: 1px solid #ffffff22;
+    border-radius: 6px;
+}
+
+.edit-button:hover {
+    background: #385baf66;
+}
+
+.delete-button:hover {
+    background: #b52e4c66;
+}
+
+.ranking-section {
+    position: sticky;
+    top: 20px;
+}
+
+.ranking-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff1a;
+}
+
+.ranking-title > span {
+    font-size: 30px;
+}
+
+.ranking-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.ranking-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff12;
+}
+
+.ranking-number {
+    color: #bd81ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.ranking-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    gap: 4px;
+}
+
+.ranking-info strong {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.ranking-info span {
+    color: #9588a9;
+    font-size: 12px;
+}
+
+.ranking-votes {
+    color: #d3adff;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.ranking-empty {
+    padding: 20px 0;
+    color: #9c91ad;
+    font-size: 14px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 40px 15px;
+    text-align: center;
+    background: #151024;
+    border: 1px dashed #7945b9;
+    border-radius: 12px;
+}
+
+.empty-state span {
+    font-size: 35px;
+}
+
+.empty-state h3 {
+    margin: 10px 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+}
+
+.empty-state p {
+    color: #a99bbd;
+}
+
+.footer {
+    padding: 25px 10px;
+    color: #8f829f;
+    border-top: 1px solid #ffffff18;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.loading {
+    padding: 100px 20px;
+    text-align: center;
+    color: #d9bdff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.loading p {
+    margin-top: 15px;
+    color: #a99bbd;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+@media (max-width: 850px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ranking-section {
+        position: static;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .online-status {
+        font-size: 8px;
+    }
+
+    .hero {
+        padding: 55px 5px 40px;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .hero-stats strong {
+        font-size: 22px;
+    }
+
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row, .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 17px;
+    }
+}
