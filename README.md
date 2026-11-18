@@ -124,7 +124,7 @@ El proyecto se despliega mediante Vercel para permitir el acceso a la aplicació
 
 ## 👨‍💻 Autor
 
-**Nombre:** Jesús Alejandro Membreño Padilla
+**Nombre:** Jesús Alexander  Membreño Padilla
 
 **Proyecto:** EPIC ARCADE
 
